@@ -9,9 +9,11 @@ paragraphElement.addEventListener('click', changeParagraphText);
 
 const inputElement = document.querySelector('input');
 
-function retrieveUserInput() {
-  const enteredText = inputElement.value;
+function retrieveUserInput(event) {
+  // const enteredText = inputElement.value;
+  const enteredText = event.target.value;
   console.log(enteredText);
+  console.log(event);
 }
 
 inputElement.addEventListener('input', retrieveUserInput);
